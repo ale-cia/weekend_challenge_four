@@ -26,6 +26,7 @@ app.controller('EmployeeController', ['$http', function ($http) {
         }).then(function(response){
             console.log(response);
             self.getEmployeeInfo();
+            self.employees = {};            
         }); // end of $http
     }; // end of getMessages
 
@@ -43,4 +44,5 @@ app.controller('EmployeeController', ['$http', function ($http) {
     
     self.getEmployeeInfo();
     self.monthlySalary();
+    
     }]);
