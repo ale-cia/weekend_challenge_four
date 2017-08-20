@@ -39,10 +39,9 @@ EmployeeApp/
 
 ## In index.html
 - [x] Source in files 
-- [] Create container div
-- [] Create an input box for tasks
-- [] Create buttons for 'completed' and 'delete'
-- [] Create save button
+- [] Create table
+- [] Create labels for inputs
+- [] 
 
 
 ## server.js
@@ -64,6 +63,6 @@ EmployeeApp/
 - [x] Set up database configuration
 
 ## employees.js
-- [x] Build out database logic
+- [xgit a] Build out database logic
 
 - [] Include sql file
