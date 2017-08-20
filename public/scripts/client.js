@@ -4,9 +4,10 @@ app.controller('EmployeeController', ['$http', function ($http) {
     console.log('Employee Controller has been loaded');
     var self = this;
     self.employees = [];
+    
 
 
-    self.getEmployeeInfo = function () {
+    self.getEmployeeInfo = function() {
         $http({
             method: 'GET',
             url: '/employees'
@@ -28,6 +29,18 @@ app.controller('EmployeeController', ['$http', function ($http) {
         }); // end of $http
     }; // end of getMessages
 
+    self.monthlySalary = function() {
+        $http({
+            method: 'GET',
+            url: '/employees/salary'
+        }).then(function (response) {
+            console.log(response);
+            console.log(response.data);
+            self.sum = response.data[0].sum;
+
+        }); // end of $http
+    }; // end of getMessages
     
     self.getEmployeeInfo();
+    self.monthlySalary();
     }]);

@@ -2,6 +2,31 @@ var express = require('express');
 var router = express.Router();
 var pool = require('../modules/pool'); 
 
+router.get('/', function(req, res) {
+	// Add a SELECT query
+	console.log('in SELECT query');
+	pool.connect(function(errorConnectingToDatabase, client, done){
+		if(errorConnectingToDatabase) {
+			// when connecting to database failed
+			console.log('Error connecting to database', errorConnectingToDatabase);
+			res.sendStatus(500);
+		} else {
+			// when connecting to database worked!
+			console.log('Get successful');
+			client.query('SELECT * FROM employees;', function(errorMakingQuery, result) {
+				done();
+				if(errorMakingQuery) {
+					console.log('Error making SELECT database query', errorMakingQuery);
+					res.sendStatus(500);
+				} else {
+					res.send(result.rows);
+				}
+			});
+		}
+	});
+});
+
+
 router.post('/', function(req, res){
 	console.log('attempted to INSERT an employee!');
 	// Add an INSERT query
@@ -26,9 +51,9 @@ router.post('/', function(req, res){
 	});
 });
 
-router.get('/', function(req, res) {
+router.get('/salary', function(req, res) {
 	// Add a SELECT query
-	console.log('in SELECT query');
+	console.log('in SUM SELECT query');
 	pool.connect(function(errorConnectingToDatabase, client, done){
 		if(errorConnectingToDatabase) {
 			// when connecting to database failed
@@ -37,7 +62,7 @@ router.get('/', function(req, res) {
 		} else {
 			// when connecting to database worked!
 			console.log('Get successful');
-			client.query('SELECT * FROM employees;', function(errorMakingQuery, result) {
+			client.query('SELECT SUM (employees_salary) FROM employees;', function(errorMakingQuery, result) {
 				done();
 				if(errorMakingQuery) {
 					console.log('Error making SELECT database query', errorMakingQuery);
@@ -49,5 +74,6 @@ router.get('/', function(req, res) {
 		}
 	});
 });
+
 
 module.exports = router;

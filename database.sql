@@ -6,3 +6,5 @@ CREATE TABLE employees (
     employees_salary FLOAT NOT NULL
 );
 
+SELECT SUM (employees_salary) FROM employees;
+
