@@ -63,6 +63,6 @@ EmployeeApp/
 - [x] Set up database configuration
 
 ## employees.js
-- [xgit a] Build out database logic
+- [] Build out database logic
 
 - [] Include sql file
