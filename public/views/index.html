@@ -6,12 +6,26 @@
         <script src="views/client.js"></script>
         <!-- <link rel="stylesheet" href="styles.css"> -->
     </head>
-    <body>
+    <body ng-app="EmployeesApp" ng-controller="EmployeeController as vm">
         <h1>Employees Full Stack</h1>
         <div id="">
             
         </div>
         <div id="">
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" in vm.">
+                    <td>{{}}</td>
+                    <td>{{}}</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
