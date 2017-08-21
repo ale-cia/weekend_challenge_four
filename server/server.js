@@ -2,7 +2,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var employees = require('./routes/employees.js');
 var path = require('path');
-// var pool = require('./modules/pool.js');
 
 var app = express();
 
