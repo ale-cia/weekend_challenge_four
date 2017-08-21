@@ -42,23 +42,24 @@ Employee Full Stack App
 
 ## In index.html
 - [x] Source in files 
-- [] Create table
-- [] Create labels for inputs
+- [x] Create labels for inputs
+- [x] Create table
+
 
 
 
 ## server.js
 
-- [] Setup server.js
-- [] Verify server is running
+- [x] Setup server.js
+- [x] Verify server is running
 
 **In client.js, create a POST request**
 
 
 ## client.js
-- [] Use Angular
-- [] Create POST request in client.js and route in app.js
-- [] Create table or divs in html or client.js to store todos
+- [x] Use Angular
+- [x] Create POST and GET requests 
+- [x] Create GET request with salary route
 
 
 
