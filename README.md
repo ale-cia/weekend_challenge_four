@@ -68,4 +68,5 @@ Employee Full Stack App
 ## employees.js
 - [x] Build out database logic
 
+## Final Step
 - [x] Include database file
