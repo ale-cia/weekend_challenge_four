@@ -27,9 +27,8 @@
             
                 <label for="lastName">Last Name</label>
                 <input name="lastName" type="text" ng-model="vm.newEmployee.last_name" placeholder="Last Name" />
-            </div>
-            
-            <div>
+            </div><!--/employeeInputs-->
+            <div class="employeeInfo">
                 <label for="jobTitle">Job Title</label>
                 <input name="jobTitle" type="text" ng-model="vm.newEmployee.job_title" placeholder="Job Title" />
             
@@ -37,9 +36,9 @@
                 <input name="employeesSalary" type="text" ng-model="vm.newEmployee.employees_salary" placeholder="Annaul Salary" />
             
                 <button class="btn" ng-click="vm.postNewEmployee()">Submit</button>
-            </div>
-        <div id="employeeTable">
-        <table>
+            </div>          
+        <div id="employeeTable" class="container-fluid">
+           <table>
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -60,10 +59,10 @@
         </table>
 
         <div>
-            Monthly Salary Expenditures {{ vm.sum/12 }}
-
+            <p>Monthly Salary Expenditures {{ vm.sum/12 }} </p>
         </div>
-    </div>
+    </div><!--/employeeTable container-fluid--> 
+    
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

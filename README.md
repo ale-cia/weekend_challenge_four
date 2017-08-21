@@ -8,12 +8,15 @@ We should be able to add up the salaries so the company knows how much is being 
 - [x] Create and clone repo
 - [x] Build out folder structure
 ```
-EmployeeApp/
+Employee Full Stack App/
 ├── public/
 │   │   ├── vendors/
 │   │   |    └── angular.min.js
-│   │   ├── client.js 
-|   |   ├── index.html 
+|   |   ├── views/
+|   |   |    └── employees.css
+|   |   ├── scripts/
+|   |   |    └── client.js
+│   │   ├── client.js
 ├── server/
 |   |   ├── modules/
 |   |   |   └── pool.js
@@ -41,7 +44,7 @@ EmployeeApp/
 - [x] Source in files 
 - [] Create table
 - [] Create labels for inputs
-- [] 
+
 
 
 ## server.js
@@ -63,6 +66,6 @@ EmployeeApp/
 - [x] Set up database configuration
 
 ## employees.js
-- [] Build out database logic
+- [x] Build out database logic
 
-- [] Include sql file
+- [x] Include database file
