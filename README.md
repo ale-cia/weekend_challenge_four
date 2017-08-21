@@ -8,7 +8,7 @@ We should be able to add up the salaries so the company knows how much is being 
 - [x] Create and clone repo
 - [x] Build out folder structure
 ```
-Employee Full Stack App/
+Employee Full Stack App
 ├── public/
 │   │   ├── vendors/
 │   │   |    └── angular.min.js
